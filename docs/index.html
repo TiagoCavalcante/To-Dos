@@ -16,12 +16,12 @@
 				<li v-for='toDo in toDos'>
 					<span v-if='!toDo.edit'>
 						<input type='checkbox' v-model='toDo.finished' @click='finishe(toDo)' />
-						<span :class='toDo.finished ? 'todo-finished' : ''' @dblclick='edit(toDo)'>
+						<span :class='toDo.finished ? "todo-finished" : ""' @dblclick='edit(toDo)'>
 							{{toDo.description}}
 						</span>
 					</span>
 					<span v-else>
-						<input type='text' v-model='toDo.description' @keyup='update($event, toDo)' @blur='cancelUpdate(toDo)' />
+						<input type='text' v-focus v-model='toDo.description' @keyup='update($event, toDo)' @blur='cancelUpdate(toDo)' />
 					</span>
 					<button @click='remove(toDo)'>X</button>
 				</li>
@@ -29,7 +29,7 @@
 		</div>
 	</main>
 
-	<script src="https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js"></script>
+	<script src='https://unpkg.com/vue@3.0.5/dist/vue.global.prod.js'></script>
 	<script src='index.js'></script>
 </body>
 </html>
