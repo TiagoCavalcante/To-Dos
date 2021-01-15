@@ -7,19 +7,49 @@ html {
 
 body {
 	max-width: 600px;
-	width: 100%;
+	width: 90%;
 
 	margin: 0 auto;
-}
-
-button {
-	float: right;
 }
 
 ul {
 	list-style-type: none;
 }
 
+li {
+	height: 55px;
+	position: relative;
+}
+
+li span input, li span span {
+	margin-right: 10px;
+}
+
+li span span {
+	word-wrap: break-word;
+}
+
+button {
+	position: absolute;
+	right: 0;
+	top: 12px;
+	height: 30px;
+	width: 30px;
+	text-align: center;
+	vertical-align: middle;
+}
+
 .todo-finished {
 	text-decoration: line-through;
+}
+
+#newToDo {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+@media (max-width: 247px) {
+	h1 {
+		font-size: 1.25em;
+	}
 }
