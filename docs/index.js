@@ -1,4 +1,4 @@
-const app = Vue.createApp({
+Vue.createApp({
 	data() {
 		return {
 			toDos: [],
