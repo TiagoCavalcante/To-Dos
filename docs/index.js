@@ -9,7 +9,7 @@ Vue.createApp({
 		this.toDos = localStorage.toDos ? JSON.parse(localStorage.toDos) : [];
 	},
 	methods: {
-		finishe(toDo) {
+		finish(toDo) {
 			toDo.finished = !toDo.finished;
 
 			localStorage.toDos = JSON.stringify(this.toDos.map((element) => {

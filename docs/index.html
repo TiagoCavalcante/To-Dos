@@ -16,7 +16,7 @@
 			<ul>
 				<li v-for='toDo in toDos'>
 					<span v-if='!toDo.edit'>
-						<input type='checkbox' v-model='toDo.finished' @click='finishe(toDo)' />
+						<input type='checkbox' v-model='toDo.finished' @click='finish(toDo)' />
 						<span :class='toDo.finished ? "todo-finished" : ""' @dblclick='edit(toDo)'>
 							{{toDo.description}}
 						</span>
